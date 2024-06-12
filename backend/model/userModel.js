@@ -7,13 +7,21 @@ const userSchema = mongoose.Schema({
         require:true
     },
     email:{
-        type:String,
+        type:String,    
         require:true,
         unique:true
     },
     password:{
         type:String,
         required:true
+    },
+    profileImage:{
+        type:String
+    },
+    isAdmin:{
+        type:Boolean,
+        default:false
+
     }
 },{
     timestamps:true
